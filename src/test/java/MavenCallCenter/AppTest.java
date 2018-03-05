@@ -8,20 +8,22 @@ public class AppTest
 {
 	@Test
     public void Procesar10LlamadasAlMismoTiempo()    {
+		System.out.println("----------------TEST PRINCIPAL----------------"); 	
     	CallCenter callCenter = App.crear10EmpleadosClientes();
  		
  		try {
  			System.out.println("CallCenter empezó ejecución"); 	
- 			boolean res = App.EjecutarCallCenter(callCenter);
- 			//Assert.assertTrue(res);
+ 			Assert.assertTrue(App.EjecutarCallCenter(callCenter));
 		} catch (InterruptedException e) {
 			System.err.println("Error - "+e.getMessage());
 		}
     }
 	
-	/*@Test
+	@Test
     public void EntraLlamadaYNoHayEmpleadoDisponible()    {
-    	CallCenter callCenter = App.crear10EmpleadosClientes();
+
+		System.out.println("----------------TEST EntraLlamadaYNoHayEmpleadoDisponible----------------"); 	
+    	CallCenter callCenter = App.crear4Empleados10Clientes();
  		
  		try {
  			System.out.println("CallCenter empezó ejecución"); 			
@@ -29,5 +31,5 @@ public class AppTest
 		} catch (InterruptedException e) {
 			System.err.println("Error - "+e.getMessage());
 		}
-    }*/
+    }
 }
