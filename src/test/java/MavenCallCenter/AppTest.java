@@ -32,4 +32,18 @@ public class AppTest
 			System.err.println("Error - "+e.getMessage());
 		}
     }
+	
+	@Test
+    public void EntranMasDe10LlamadasConcurrentes()    {
+
+		System.out.println("----------------TEST EntranMasDe10LlamadasConcurrentes----------------"); 	
+    	CallCenter callCenter = App.crear10Empleados30Clientes();
+ 		
+ 		try {
+ 			System.out.println("CallCenter empezó ejecución"); 			
+ 			Assert.assertTrue(App.EjecutarCallCenter(callCenter));
+		} catch (InterruptedException e) {
+			System.err.println("Error - "+e.getMessage());
+		}
+    }
 }
