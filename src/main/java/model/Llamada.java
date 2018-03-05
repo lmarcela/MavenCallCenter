@@ -14,6 +14,7 @@ public class Llamada implements Runnable {
 		this.empleado = empleado;
 	}
 
+	//Metodo encargado de atender las llamadas de forma simultanea
 	@Override
 	public void run() {
 		//La duración de la llamada debe ser de entre 5 - 10 segundos
@@ -32,13 +33,10 @@ public class Llamada implements Runnable {
 			System.out.println(Thread.currentThread().getName()+":\t Llamada # "+numeroLlamada+" atendida por "+empleado.getNombre()+" ("+tipo+")"+", Cliente: "+cliente.getNombre()+", Fecha-Hora: "+ LocalDateTime.now()+", Duración: "+duracion+" segundos.");
 			Thread.sleep(duracion*1000);//Se multiplica por 1000 para pasar segundos a milisegundos
 			System.out.println(Thread.currentThread().getName()+ ":\t Finalizó llamada # "+numeroLlamada+", Fecha-Hora: "+LocalDateTime.now());
+			//Cuando el empleado termina la llamada pasa a estar disponible
 			empleado.setDisponible(true);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-	}
-
-	public Empleado getEmpleado() {
-		return empleado;
 	}
 }

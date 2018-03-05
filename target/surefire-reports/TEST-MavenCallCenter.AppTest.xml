@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="MavenCallCenter.AppTest" time="56.146" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="MavenCallCenter.AppTest" time="58.216" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_91\jre\bin"/>
@@ -65,7 +65,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="MavenCallCenter.AppTest" name="EntranMasDe10LlamadasConcurrentes" time="24.137"/>
-  <testcase classname="MavenCallCenter.AppTest" name="EntraLlamadaYNoHayEmpleadoDisponible" time="22.005"/>
-  <testcase classname="MavenCallCenter.AppTest" name="Procesar10LlamadasAlMismoTiempo" time="10.004"/>
+  <testcase classname="MavenCallCenter.AppTest" name="EntranMasDe10LlamadasConcurrentes" time="26.141"/>
+  <testcase classname="MavenCallCenter.AppTest" name="EntraLlamadaYNoHayEmpleadoDisponible" time="22.051"/>
+  <testcase classname="MavenCallCenter.AppTest" name="Procesar10LlamadasAlMismoTiempo" time="10.024"/>
 </testsuite>
